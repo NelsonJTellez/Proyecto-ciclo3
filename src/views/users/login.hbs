@@ -1,0 +1,41 @@
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>  
+  <section class="bg-primary">
+    <div class="container py-3">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+              <div class="mb-md-5 mt-md-4 pb-5">
+                <div class="logo mb-2"><img src="/img/logo.png" alt="Logo" width="75%"></div>
+                <h2 class="fw-bold mb-2 ">¡Bienvenido!</h2>
+                <p class="text-white-50 mb-5">Ingrese sus credenciales</p>
+                <form action="/usuarios/iniciosesion" method="POST">
+                  <div class="form-outline form-white mb-3">
+                    <input type="email" name="email" class="form-control form-control-lg"
+                      placeholder="Email o nombre de usuario" />
+                  </div>
+                  <div class="form-outline form-white mb-4">
+                    <input type="password" name="password" class="form-control form-control-lg"
+                      placeholder="Contraseña" />
+                  </div>
+                  <button class="btn btn-outline-light btn-lg px-3" type="submit">Login</button>
+                  <br class="py=2"></br>
+                  <a type="button" class="btn btn-outline-light btn-sm px-3" href="/usuarios/registro" role="button">Registrar</a>
+                </div>
+                <div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

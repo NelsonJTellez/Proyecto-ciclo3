@@ -1,0 +1,44 @@
+<body>
+
+    <div class=" justify-content-center bg-primary" style="padding: 2% 15% 2%;">
+	<div style="background-color: white; border-radius: 15px;">
+		<div style="padding: 20px 20px 20px 20px;">
+             {{!-- <br>
+             <img class="img-book" alt="Imagen portada del libro" width="319" height="337">
+             <br>
+             <button class="img-book">CargarImagen</button>
+             <br> --}}
+			<form action="/libros/{{data._id}}/editar" method="POST">
+				<div>
+					<h4>Editar libro</h4>
+				</div>
+					<div class="form-group">
+						<label>Titulo</label>
+						<input name="titulo" type="text" class="form-control" value="{{data.titulo}}">
+					</div>
+					<div class="form-group">
+						<label>Autor</label>
+						<input name="autor" type="text" class="form-control" value="{{data.autor}}">
+					</div>
+					<div class="form-group">
+						<label>Descripción</label>
+						<textarea name="descripcion" type="text" style="resize:none;" class="form-control">{{data.descripcion}}</textarea>
+					</div>
+					<div class="form-group">
+						<label>Genero</label>
+						<input name="genero" type="text" class="form-control" value="{{data.genero}}">
+					</div>
+					<br/>
+					<div class="form-group d-flex justify-content-between">			
+						<a href="/libros">
+							<input type="button" class="btn btn-secondary" value="Cancelar" />
+						</a>					
+						<input type="submit" class="btn btn-success" value="Editar">
+				</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+</body>

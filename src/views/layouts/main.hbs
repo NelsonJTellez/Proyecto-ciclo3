@@ -1,0 +1,93 @@
+<head data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi Libreria</title>
+
+    <script src="/js/jquery.min.js">   </script>
+
+    <link rel="stylesheet" href="/css/site.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/site.css">
+
+</head>
+
+<!-- Inicio Menú de Navegación-->
+<nav id="main-navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" >
+            <div class="container-fluid mb-2">
+                <a class="navbar-brand" href="/#">
+                    <img src="/img/logo.png" alt="" width="" height="65" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ps-5 fs-5" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item px-1">
+                            <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="/usuarios/iniciosesion">Ingresar</a>
+                        </li>
+                        <li class="nav-item dropdown px-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Conócenos 
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/#Noticias">Noticias</a></li>
+                                <li><a class="dropdown-item" href="/#Servicios">Servicios</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/#Equipo">Nuestro Equipo</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<!-- Fin Menú de Navegación-->
+
+<!-- Inicio Espaciado para Barra de Navegación-->
+<div class="godown" id="Inicio"></div>
+        <script>            
+                $("#main-navbar").resize(function () {
+                    $('#Inicio').height($("#main-navbar").height() + 10);
+                });
+            
+                if ($("#main-navbar").height() > $('#Inicio').height()) $('#Inicio').height($("#main-navbar").height() + 10);
+            
+        </script>
+<!-- Fin Espaciado para Barra de Navegación-->
+
+<body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="0" class="scrollspy-example bg-primary" tabindex="0">
+    {{> errors }}
+    {{{ body }}}
+</body>
+
+<!-- Inicio Pie de Página -->
+    <footer class="pie-de-pagina bg-dark py-4">
+            <article>
+                <h3 class="pb-2">Contacto</h3>
+                <p><a href="http://www.linkedin.com/in/juandahs">@juandahs</a> - Development Team Member</p>
+                <p><a href="http://www.linkedin.com/in/fabc">@fabc</a> - Development Team Member</p>
+            </article>
+            <article>
+                <h2 class="pb-2">Otra Información</h2>
+                <p>Proyecto desarrollado para el Ciclo 3 de la Ruta MinTic 2022</p>
+                <p><a href="https://github.com/Juandah88/Ciclo-3/tree/main">GitHub</a> - Repositorio</p>
+                <p><a href="https://drive.google.com/drive/folders/1nX_zGj9j4stVcPBauKTPcbcJvVWbBYjL?usp=sharing">Drive</a> - Documentación</p>
+            </article>
+    </footer>
+    <!-- Fin Pie de Página -->
+
+<!-- Scritps -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>

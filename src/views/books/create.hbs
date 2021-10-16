@@ -1,0 +1,40 @@
+<!-- Crear -->
+<div class=" justify-content-center bg-primary" style="padding: 2% 15% 2%;">
+	<div style="background-color: white; border-radius: 15px;">
+		<div style="padding: 20px 20px 20px 20px;">
+			<form action="/libros/crear" method="POST">
+				<div>
+					<h4>Agregar libro</h4>
+				</div>
+				<div>
+					<div class="form-group">
+						<label>Titulo</label>
+						<input name="titulo" type="text" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label>Autor</label>
+						<input name="autor" type="text" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label>Descricpción</label>
+						<textarea name="descripcion" type="text" style="resize:none;" class="form-control"
+							required></textarea>
+					</div>
+					<div class="form-group">
+						<label>Genero</label>
+						<input name="genero" type="text" class="form-control" required>
+					</div>
+					<br>
+					<div class="form-group d-flex justify-content-between">				
+						<a href="/libros">
+							<input type="button" class="btn btn-secondary" value="Cancelar" />
+						</a>			
+						<input type="submit" class="btn btn-success" value="Crear">
+				</div>
+				</div>
+				
+				
+			</form>
+		</div>
+	</div>
+</div>

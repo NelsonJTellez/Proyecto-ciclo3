@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    {{!-- Boostrap de la tabla --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    {{!-- iconos --}}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<br>
+
+
+    <div class="container">
+        <div class="table-responsive">
+            <div class="table-wrapper bg-dark">
+                <div class="table-title bg-secondary">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h2><b>Listado de libros</b></h2>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="/libros/crear" class="btn btn-success"><i
+                                    class="material-icons">&#xE147;</i> <span>Nuevo libro</span></a>
+                        </div>
+                    </div>
+                </div>
+                <table id="books" class="table table-light table-success table-striped table-hover">
+                    <thead>
+                        <tr>                         
+                            <th>Titulo</th>
+                            <th>Autor</th>
+                            <th>Genero</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each books}}
+                        <tr>
+                            <td style="display: none;">{{_id}}</td>
+                            <td>{{titulo}}</td>
+                            <td>{{autor}}</td>
+                            <td>{{genero}}</td>
+                            <td>
+                                <a href="libros/{{_id}}/editar" class="edit"><i class="material-icons pb-3"
+                                         title="Edit">&#xE254;</i></a>
+                                <form action="libros/{{_id}}/borrar?_method=DELETE" method="POST">
+                                <input type="hidden" value="DELETE" name="_method">
+                                
+                                       <button class="material-icons"
+                                        title="Delete">&#xE872;</button>
+                                </form>
+                                
+                            </td>
+                        </tr>
+
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</html>
